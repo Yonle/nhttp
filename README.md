@@ -16,7 +16,7 @@ node index.js
 ```
 
 ## Endpoints
-- `/req` for `REQ`. Fill the req filter into request query. As example, `/req?kinds=0,1&authors=abcd,1234,` (Some field may require commas)
+- `/req` for `REQ`. Fill the req filter into request query. As example, `/req?kinds=0,1&authors=abcd,1234,blah` (Some field may require commas)
 - `/publish` for event publishing. Send event data in JSON format to this endpoint with POST request.
 
 ## Response
