@@ -1,6 +1,8 @@
 module.exports = {
   port: 3000,
   req_limit: 10000,
+  clusters: 1,
+  pools: 1,
   relays: [
     // "wss://example1.com",
     // "wss://example2.com",
