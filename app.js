@@ -18,6 +18,8 @@ app.get("/req", async (req, res) => {
   filter.authors = filter?.authors?.split(",") || [];
   filter.kinds = filter?.kinds?.split(",")?.map(parseInt) || [];
   filter.ids = filter?.ids?.split(",")?.map(parseInt) || [];
+  filter.since = parseInt(filter.since);
+  filter.until = parseInt(filter.until);
 
   for (i in filter) {
     if (i.startsWith("#")) {
