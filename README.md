@@ -34,3 +34,6 @@ Every JSON response including `status` code:
 - `2`: Something went wrong in server.
 
 When error occured, `error` will return string value.
+
+## License
+This software was licensed under **BSD-3-Clause**. However, the API or the spec that were mentioned in the [endpoints](#endpoints) section was **Public Licensed**.
