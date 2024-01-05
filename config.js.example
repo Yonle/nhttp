@@ -1,4 +1,5 @@
 module.exports = {
+  port: 3000,
   req_limit: 10000,
   relays: [
     // "wss://example1.com",

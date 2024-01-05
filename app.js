@@ -48,4 +48,5 @@ app.post("/publish", async (req, res) => {
   res.json({ status: 0, error: null });
 });
 
-app.listen(3000);
+const listener = app.listen(config.port, _ =>
+  console.log(`Now listening on port ${listener.address().port}`));
