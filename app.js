@@ -10,6 +10,10 @@ const config = require("./config");
 
 app.use(compression());
 app.use(bodyParser.json());
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  next();
+});
 
 app.get("/req", async (req, res) => {
   const filter = req.query;
