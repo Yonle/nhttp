@@ -1,0 +1,34 @@
+{
+  "name": "nhttp",
+  "version": "1.0.0",
+  "description": "Nostr relay over http",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Yonle/nhttp.git"
+  },
+  "keywords": [
+    "nostr",
+    "relay",
+    "http"
+  ],
+  "author": "Yonle <yonle@lecturify.net>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/Yonle/nhttp/issues"
+  },
+  "homepage": "https://github.com/Yonle/nhttp#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "nostr-tools": "^2.1.1",
+    "websocket-polyfill": "^0.0.3",
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

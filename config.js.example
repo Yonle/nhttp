@@ -1,0 +1,8 @@
+module.exports = {
+  req_limit: 10000,
+  relays: [
+    // "wss://example1.com",
+    // "wss://example2.com",
+    // ....
+  ]
+}
