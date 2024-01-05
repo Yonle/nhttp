@@ -17,7 +17,7 @@ app.get("/req", async (req, res) => {
   filter.limit = parseInt(((filter.limit > config.req_limit) ? config.req_limit : filter.limit) || config.req_limit);
   filter.authors = filter?.authors?.split(",") || [];
   filter.kinds = filter?.kinds?.split(",")?.map(_ => parseInt(_)) || [];
-  filter.ids = filter?.ids?.split(",")?.map(_ => parseInt(_)) || [];
+  filter.ids = filter?.ids?.split(",") || [];
   filter.since = parseInt(filter.since);
   filter.until = parseInt(filter.until);
 
