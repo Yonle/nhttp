@@ -30,27 +30,27 @@ app.get("/req", async (req, res) => {
   }
 
   try {
-    const events = await pool.querySync(config.relays, filter);
+    const results = await pool.querySync(config.relays, filter);
     res.json({
       status: 0,
-      events,
-      error: null
+      results,
+      notice: null
     });
   } catch (err) {
     res.status(500).json.json({
       status: 2,
-      events: [],
-      error: "failed to fetch. try again."
+      results: [],
+      notice: "failed to fetch. try again."
     });
   }
 });
-7
+
 app.post("/publish", async (req, res) => {
-  if (!NostrTools.validateEvent(req.body) || !NostrTools.verifyEvent(req.body)) return res.status(400).json({ status: 1, error: "Invalid event" });
+  if (!NostrTools.validateEvent(req.body) || !NostrTools.verifyEvent(req.body)) return res.status(400).json({ status: 1, results, notice: "Invalid event" });
   const pool = getPool();
   // it does not guarantee.
   pool.publish(config.relays, req.body);
-  res.json({ status: 0, error: null });
+  res.json({ status: 0, results: [], notice: null });
 });
 
 function getPool() {

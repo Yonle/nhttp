@@ -23,8 +23,8 @@ node index.js
 ```json
 {
   "status": 0,
-  "events": [],
-  "error": null
+  "results": [],
+  "notice": null
 }
 ```
 
@@ -33,7 +33,7 @@ Every JSON response including `status` code:
 - `1`: Invalid Request
 - `2`: Something went wrong in server.
 
-When error occured, `error` will return string value.
+`notice` will be a string when certain condition occured (eg. error, rejection, note of ratelimit)
 
 ## License
 This software was licensed under **BSD-3-Clause**. However, the API or the spec that were mentioned in the [endpoints](#endpoints) section was **Public Licensed**.
