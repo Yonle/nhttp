@@ -1,4 +1,5 @@
 const express = require("express");
+const compression = require("compression");
 const NostrTools = require("nostr-tools");
 const bodyParser = require("body-parser");
 
@@ -7,6 +8,7 @@ const pools = [];
 
 const config = require("./config");
 
+app.use(compression());
 app.use(bodyParser.json());
 
 app.get("/req", async (req, res) => {
