@@ -1,6 +1,6 @@
 module.exports = {
   port: 3000,
-  req_limit: 100,
+  req_limit: 500,
   clusters: 1,
   pools: 1,
   relays: [
