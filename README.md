@@ -22,16 +22,15 @@ node index.js
 ## Response
 ```json
 {
-  "status": 0,
   "results": [],
   "notice": null
 }
 ```
 
-Every JSON response including `status` code:
-- `0`: OK / Success
-- `1`: Invalid Request
-- `2`: Something went wrong in server.
+Every JSON response has different HTTP status code:
+- `200`: OK / Success
+- `400`: Invalid Request
+- `500`: Something went wrong in server.
 
 `notice` will be a string when certain condition occured (eg. error, rejection, note of ratelimit)
 
